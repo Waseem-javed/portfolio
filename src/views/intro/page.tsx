@@ -28,34 +28,19 @@ const Intro = () => {
 
           <div className="text-gray-300">
             <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed text-justify">
-              {`I'm a passionate Full Stack Software Engineer with a strong
-              background in cybersecurity, with a passion for building clean, secure,
-              and scalable applications using advance Technologies. My journey began at the University of Swabi, where I
-              studied Computer Science and work with the department faculty member on CSS project which conferen submission system in 2019. After graduation I started my career at COMSATS Cyber
-              Lab, working closely with a professor as a Full Stack Engineer.
-              Together working with the team, we developed a cybersecurity product called Breach+,
-              which later became the foundation for Cytomate, a Qatar-based
-              cybersecurity company. I continued with Cytomate, contributing to
-              the development and enhancement of its core products — Breach+,
-              Sarab, and ASM. I later joined Averox as a Software and
-              Cybersecurity Engineer, where I helped build real-time messaging
-              and video calling apps for mobile and web, while also performing
-              penetration testing on open-source platforms. Throughout my
-              career, I've worked with several well-established organization like smartdealer, army service crops and some others organization as well and always
-              focusing on building secure, user-friendly applications and
-              contributing to cutting-edge solutions in the cybersecurity and
-              software space. Beyond my professional roles, I have a strong
-              entrepreneurial vision — I'm currently working on building
-              SundayCode AI, a company focused on creating intelligent,
-              impactful software products. My goal is to make SundayCode AI a
-              leading name in AI-powered solutions, combining technical
-              excellence with real-world usability. When I'm not coding, you'll
-              find me exploring emerging tech, contributing to open-source, or
-              mentoring aspiring developers. I believe in the power of
-              collaboration, continuous learning, and using technology to make a
-              real difference. If you're working on something exciting — or
-              looking to turn an idea into reality — I'd love to connect and
-              build something extraordinary together.`}
+              <span>
+                I am <span className="font-bold text-blue-400">Waseem Javed</span>, a <span className="font-bold text-pink-400">Software Engineer</span> and <span className="font-bold text-purple-400">Offensive Security Specialist</span>. My journey began at the <span className="font-semibold text-blue-300">University of Swabi</span>, where I studied <span className="font-semibold text-orange-300">Computer Science</span> and worked with the department faculties on the <span className="font-bold text-green-400">CSS (Conference Submission System)</span> project in 2019. After graduation, I started my career at <span className="font-semibold text-blue-400">COMSATS Cyber Lab</span>, working closely with a professor as a <span className="font-bold text-purple-400">Full Stack Engineer</span>.
+                <br />
+                Together with the team, we developed cybersecurity products like <span className="font-bold text-yellow-400">Breach+</span>, <span className="font-bold text-teal-400">Sarab</span>, and <span className="font-bold text-blue-400">ASM (Attack Surface Management)</span>. <span className="font-semibold text-yellow-400">Breach+</span> later became the foundation for <span className="font-bold text-pink-400">Cytomate</span>, a Qatar-based cybersecurity company. I continued with Cytomate, contributing to the development and enhancement of its core products <span className="font-bold text-yellow-400">Breach+</span>, <span className="font-bold text-teal-400">Sarab</span>, and <span className="font-bold text-blue-400">ASM</span>.
+                <br />
+                I later joined <span className="font-bold text-green-400">Averox</span> as a <span className="font-bold text-purple-400">Software and Cybersecurity Engineer</span>, where I helped build <span className="font-semibold text-orange-300">real-time messaging</span> and <span className="font-semibold text-orange-300">video calling apps</span> for <span className="font-semibold text-blue-300">mobile and web</span>, while also performing <span className="font-bold text-red-400">security testing</span> on open-source platforms as well as our own web and mobile applications.
+                <br />
+                Throughout my career, I've worked with several well-established organizations like <span className="font-bold text-yellow-300">Army Service Corps</span>, <span className="font-bold text-green-400">Smartdealer</span>, and others, always focusing on building <span className="font-semibold text-blue-400">secure</span>, <span className="font-semibold text-pink-400">user-friendly applications</span> and contributing to <span className="font-bold text-purple-400">cutting-edge solutions</span> in the <span className="font-bold text-blue-300">cybersecurity</span> and <span className="font-bold text-green-300">software</span> space.
+                <br />
+                Beyond my professional roles, I have a strong <span className="font-bold text-yellow-400">entrepreneurial vision</span>. I founded <span className="font-bold text-pink-400">SundayCode AI</span> in 2023—an <span className="font-bold text-blue-400">AI-focused company</span> dedicated to developing <span className="font-bold text-red-400">security products</span> and other intelligent software solutions. My goal is to make <span className="font-bold text-pink-400">SundayCode AI</span> a leading name in <span className="font-bold text-blue-400">AI-powered solutions</span>, combining <span className="font-semibold text-green-300">technical excellence</span> with <span className="font-semibold text-orange-300">real-world usability</span>.
+                <br />
+                When I'm not coding, you'll often find me <span className="font-bold text-cyan-300">exploring emerging tech</span>, <span className="font-bold text-blue-400">freely contributing to anyone's projects</span>, or <span className="font-bold text-purple-300">mentoring aspiring developers</span>. I believe in the power of <span className="font-bold text-yellow-300">collaboration</span>, <span className="font-bold text-lime-400">continuous learning</span>, and using technology to make a <span className="font-semibold text-pink-400">real difference</span>. If you're working on something exciting or looking to turn an idea into reality, I'd love to connect and build something extraordinary together.
+              </span>
             </p>
           </div>
         </div>

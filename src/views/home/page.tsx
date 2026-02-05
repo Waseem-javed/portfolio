@@ -4,7 +4,7 @@ import React from "react";
 import { Image, Typography } from "antd";
 import { Download } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
-import MY_IMAGE from "assets/images/waseem.jpg";
+import MY_IMAGE from "assets/images/waseem.jpeg";
 
 import SundayCode from "assets/images/sundaycode.jpg";
 import { Link } from "react-router-dom";
@@ -20,17 +20,17 @@ const Home = () => {
             <div className="relative w-full aspect-square">
               {/* Animated pulse waves */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="absolute w-full h-full rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 animate-pulse-wave"></div>
+                <div className="absolute w-full h-full rounded-full bg-gradient-to-br from-blue-500/20 to-red-500/20 animate-pulse-wave"></div>
                 <div
-                  className="absolute w-[90%] h-[90%] rounded-full bg-gradient-to-br from-blue-500/30 to-purple-500/30 animate-pulse-wave"
+                  className="absolute w-[90%] h-[90%] rounded-full bg-gradient-to-br from-blue-500/30 to-red-500/30 animate-pulse-wave"
                   style={{ animationDelay: "0.5s" }}
                 ></div>
                 <div
-                  className="absolute w-[80%] h-[80%] rounded-full bg-gradient-to-br from-blue-500/40 to-purple-500/40 animate-pulse-wave"
+                  className="absolute w-[80%] h-[80%] rounded-full bg-gradient-to-br from-blue-500/40 to-red-500/40 animate-pulse-wave"
                   style={{ animationDelay: "1s" }}
                 ></div>
                 <div
-                  className="absolute w-[70%] h-[70%] rounded-full bg-gradient-to-br from-blue-500/50 to-purple-500/50 animate-pulse-wave"
+                  className="absolute w-[70%] h-[70%] rounded-full bg-gradient-to-br from-blue-500/50 to-red-500/50 animate-pulse-wave"
                   style={{ animationDelay: "1.5s" }}
                 ></div>
               </div>
