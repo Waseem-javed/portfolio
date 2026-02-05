@@ -31,8 +31,8 @@ const Projects = () => {
     {
       title: "Sarab - Deception Product",
       description:
-        "An advanced AI content generation platform that helps businesses create high-quality, SEO-optimized content. Features include automated blog writing, social media content generation, and content optimization tools.",
-      technologies: ["React", "Nodejs", "TypeScript", "MongoDB"],
+        "Sarab our internal deception technology, sets up a network of decoys that mimic your company's actual assets, effectively misleading attackers and safeguarding critical data.",
+      technologies: ["React", "Nodejs", "TypeScript", "MongoDB", "Proxmox", "Elastic"],
       github: "https://github.com/waseem-javed",
       live: "https://cytomate.net/project/sarab",
       image: Sarab,

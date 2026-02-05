@@ -19,7 +19,7 @@ export const Navbar = () => {
       label: "Medium",
     },
     {
-      to: "https://facebook.com/m33saw",
+      to: "https://facebook.com/@meeesaw",
       icon: Facebook,
       label: "Facebook",
     },

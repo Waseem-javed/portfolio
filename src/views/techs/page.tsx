@@ -163,7 +163,10 @@ const Technologies = () => {
       <div className="text-center mb-3">
         <div className="relative inline-block">
           <div className="relative">
-            <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+            <div className="absolute rotate-90 inset-0 flex items-center justify-center">
+              
+            </div>
+            <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent relative z-10">
               Tech Stack
             </h2>
           </div>

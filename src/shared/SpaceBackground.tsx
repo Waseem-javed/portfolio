@@ -89,7 +89,7 @@ export function SpaceBackground() {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-b from-[#1b1b0f] via-[#0a0a3f] to-[#0a0a1f]"
+      className="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-b from-[#0a0a14] via-[#090918] to-[#05050a]"
     />
   );
 }

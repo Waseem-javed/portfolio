@@ -1,5 +1,5 @@
 import React from "react";
-import { Timeline, Row, Col, Image, Grid } from "antd";
+import { Row, Col, Image, Grid } from "antd";
 import { Briefcase, Code, Shield } from "lucide-react";
 
 const experienceData = [
@@ -82,55 +82,48 @@ const Experience = () => {
   return (
     <Row justify={"center"} className="min-h-[80vh] p-4 sm:p-6 w-full">
       <Col xs={24} lg={16}>
-        <Timeline mode={!sm ? "right" : "alternate"} className="text-white">
-          {experienceData.map((exp, index) => {
-            return (
-              <Timeline.Item
-                key={index}
-                label={
-                  <span className="text-xs sm:text-sm text-slate-100 font-medium whitespace-nowrap block w-full">
-                    {exp.duration}
-                  </span>
-                }
-                color="white"
-              >
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-white/30 rounded-2xl px-4 py-4 shadow-xl backdrop-blur-sm transition-all duration-300 group">
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-                      {exp.role}
-                    </h3>
-                    <p className="text-gray-300 text-base sm:text-lg">
-                      {exp.company}
-                    </p>
-                    <p className="text-gray-400 mt-2 text-sm sm:text-base">
-                      {exp.description}
-                    </p>
-                    <p className="text-xs sm:text-sm text-blue-400 font-semibold mt-2">
-                      {exp.duration}
-                    </p>
-                  </div>
-                  <div className="flex-shrink-0 w-full sm:w-20 sm:h-20 h-40 sm:h-20 relative">
-                    <Image
-                      src={exp.logo}
-                      width={80}
-                      height={80}
-                      alt={`${exp.company} logo`}
-                      className="object-cover rounded-lg w-full h-full sm:w-20 sm:h-20"
-                      style={{
-                        objectFit: !sm ? "cover" : "cover",
-                        width: !sm ? "100%" : undefined,
-                        height: !sm ? "160px" : undefined,
-                        maxWidth: !sm ? "100%" : undefined,
-                        maxHeight: !sm ? "160px" : undefined,
-                        minHeight: !sm ? "120px" : undefined,
-                      }}
-                    />
-                  </div>
-                </div>
-              </Timeline.Item>
-            );
-          })}
-        </Timeline>
+        <div className="flex flex-col gap-4">
+          {experienceData.map((exp, index) => (
+            <div
+              key={index}
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 border border-white/10 hover:border-white/30 rounded-lg px-4 py-4 shadow-xl backdrop-blur-sm transition-all duration-300 group"
+            >
+              <div className="flex-1 min-w-0">
+                <h3 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-400">
+                  {exp.role}
+                </h3>
+                <p className="text-gray-300 text-base sm:text-lg">
+                  {exp.company}
+                </p>
+                <p className="text-gray-400 mt-2 text-sm sm:text-base base">
+                  {exp.description}
+                </p>
+                <p className="text-xs sm:text-sm text-blue-400 font-semibold mt-2">
+                  {exp.duration}
+                </p>
+              </div>
+              <div className="flex-shrink-0 w-full sm:w-20 sm:h-20 h-40 relative flex justify-center items-center sm:block">
+                <Image
+                  src={exp.logo}
+                  alt={`${exp.company} logo`}
+                  className="object-contain rounded-l mx-auto sm:-ml-3"
+                  width={sm ? 100 : 100}
+                  height={sm ? 100 : 100}
+                  style={{
+                    width: sm ? 100 : 100,
+                    height: sm ? 100 : 100,
+                    minWidth: sm ? 100 : 100,
+                    minHeight: sm ? 100 : 100,
+                    maxWidth: sm ? 100 : 100,
+                    maxHeight: sm ? 100 : 100,
+                    objectFit: "contain",
+                  }}
+                  preview={false}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </Col>
     </Row>
   );
