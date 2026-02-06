@@ -76,7 +76,7 @@ const Home = () => {
                   1000,
                   "Software Engineer",
                   1000,
-                  "Cyber Security Engineer",
+                  "Offensive Security Specialist",
                   1000,
                   "",
                   1000,

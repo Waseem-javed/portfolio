@@ -7,6 +7,7 @@ import SundayCode from "assets/images/sunday.png";
 import BreachPlus from "assets/images/Breach+.png";
 import SmartDealer from "assets/images/smartdealer.png";
 import CropsInsurance from "assets/images/cropsinsurance.png";
+import {ReactComponent as CircleSvg} from 'assets/svg/circle.svg'
 
 const { Meta } = Card;
 
@@ -104,11 +105,24 @@ const Projects = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[80vh] p-6">
-      <div className="text-center mb-10">
-        <h2 className="text-4xl md:text-4xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-          My Projects
-        </h2>
-      </div>
+      <div className="relative mb-5">
+            <div className="flex items-center justify-center">
+              <div className="relative h-40 w-40 overflow-hidden">
+                <div className="absolute inset-0 h-40 w-40" style={{ clipPath: 'inset(0 0 50% 0)' }}>
+                  <CircleSvg className="h-40 w-40 animate-spin-slow" style={{ transformOrigin: '50% 50%' }} />
+                </div>
+              </div>
+            </div>
+            <h2
+              className="text-lg -mt-20 sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold relative z-10 text-white"
+              style={{
+                WebkitTextStroke: '.5px #fff',
+                color: 'transparent',
+              }}
+            >
+              My Projects
+            </h2>
+          </div>
       <div className="w-full max-w-7xl">
         <Row gutter={[10, 10]}>
           {projects.map((project, index) => (

@@ -12,6 +12,7 @@ import {
   Package,
 } from "lucide-react";
 import { Image } from "antd";
+import {ReactComponent as CircleSvg} from 'assets/svg/circle.svg'
 
 const Technologies = () => {
   const technologies = [
@@ -163,10 +164,20 @@ const Technologies = () => {
       <div className="text-center mb-3">
         <div className="relative inline-block">
           <div className="relative">
-            <div className="absolute rotate-90 inset-0 flex items-center justify-center">
-              
+            <div className="flex items-center justify-center">
+              <div className="relative h-40 w-40 overflow-hidden">
+                <div className="absolute inset-0 h-40 w-40" style={{ clipPath: 'inset(0 0 50% 0)' }}>
+                  <CircleSvg className="h-40 w-40 animate-spin-slow" style={{ transformOrigin: '50% 50%' }} />
+                </div>
+              </div>
             </div>
-            <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent relative z-10">
+            <h2
+              className="text-2xl -mt-20 sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold relative z-10 text-white"
+              style={{
+                WebkitTextStroke: '.5px #fff',
+                color: 'transparent',
+              }}
+            >
               Tech Stack
             </h2>
           </div>

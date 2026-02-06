@@ -85,7 +85,7 @@ const Education:React.FC = () => {
         <div className="relative">
           {/* Vertical timeline bar */}
           <div
-            className="absolute sm:left-10 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 via-purple-500 to-pink-400 rounded-full"
+            className="absolute hidden sm:block sm:left-10 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 via-purple-500 to-pink-400 rounded-full"
           />
           <div className="flex flex-col gap-3">
             {educationData.map((edu, index) => (
@@ -94,7 +94,7 @@ const Education:React.FC = () => {
                 className="flex items-start gap-6 cursor-pointer"
               >
                 {/* Timeline Dot with Icon and Duration */}
-                <div className="z-10 flex flex-col items-center">
+                <div className="z-10 flex-col items-center hidden sm:block">
                   <span className="rounded-lg py-1 bg-gradient-to-b from-[#1b1b0f] via-[#0a0a3f] to-[#0a0a1f] flex flex-col items-center justify-center">
                     <div className="flex flex-col items-center justify-center">
                       {/* Icon */}
@@ -151,14 +151,16 @@ const Education:React.FC = () => {
                         </div>
                       </div>
                     </div>
+                    <div className="sm:w-20 relative flex justify-center items-center sm:block">
                     <Image
                       src={edu.logo}
-                      className="object-contain rounded-lg"
-                      width={120}
-                      height={120}
-                      style={{ width: 150, height: 150 }}
-                      preview={false}
+                      alt={`${edu.institution} logo`}
+                      width={100}
+                      height={100}
+                      className="rounded-lg p-1 bg-white object-contain aspect-square border-4 border-white/10 shadow-md"
+                      style={{ objectFit: 'contain' }}
                     />
+                  </div>
                   </div>
                 </div>
               </div>
