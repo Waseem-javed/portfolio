@@ -5,7 +5,7 @@ import { Clock10 } from "lucide-react";
 const experienceData = [
   {
     role: "Research and Development Manager",
-    company: "Army Service Corps",
+    company: "Smart Dealer",
     duration: "Oct 2024 - Present",
     description:
       "Managed a development team using proper Scrum practices, driving digital transformation and process improvements.",
@@ -26,7 +26,7 @@ const experienceData = [
     company: "Cytomate",
     duration: "June 2022 - Sep 2024",
     description:
-      "Developed and maintained web applications using React and TypeScript. Collaborated with cross-functional teams to deliver high-quality software solutions.",
+      "Developed and maintained web applications using React,Node with TypeScript. Collaborated with cross-functional teams to deliver high-quality security products solutions.",
     icon: Clock10,
     logo: "https://store-images.s-microsoft.com/image/apps.51391.929fdbe9-4567-4649-809c-2c9628e88cee.6e714dd7-4bd7-44e1-ad25-a9f738b83ebc.f66c1511-bfa8-4202-9769-d7f54fa44919",
   },
@@ -35,7 +35,7 @@ const experienceData = [
     company: "COMSATS Cyber Lab",
     duration: "June 2021 - May 2022",
     description:
-      "Conducted research in cybersecurity and machine learning. Developed tools for network security analysis and threat detection.",
+      "Conducted research in cybersecurity offensive products. Developed tools for network security analysis and threat detection.",
     icon: Clock10,
     logo: "https://crystalpng.com/wp-content/uploads/2022/02/COMSATS-University-logo.png",
   },
@@ -44,11 +44,7 @@ const experienceData = [
     company: "Reap Agro",
     duration: "Mar 2021 - May 2021",
     description: `In reapagro as a react native developer to develop a mobile application for
-agriculture crops management. Reap Agro is working to improve the lives of small
-holder farmers by providing timely interest-free financing to support and facilitate
-them, in the form of inputs and easy credit. Overcoming poverty one farmer at a
-time, we aim to enable them by decreasing cost, improving yield and managing
-disasters through our advisory and technological channels.`,
+agriculture crops management.`,
     icon: Clock10,
     logo: "https://play-lh.googleusercontent.com/jO90udZr_1E2FU2D1LvOJ3fMGp5ccbqzsMxS1hbh250gU5H08SzIdjvTnP5wk9ekhINw=w1024-h500",
   },
@@ -58,8 +54,7 @@ disasters through our advisory and technological channels.`,
     duration: "Feb 2019 - Apr 2019",
     description: `CONFERENCE SUBMISSION SYSTEM (CSS) to provide a platform for researchers
 and industry practitioners to share their innovations, ideas, research results and
-development experiences in different fields .registered people can check the
-status of paper further information check the website yourself link is given below.`,
+development experiences in different fields.`,
     icon: Clock10,
     logo: "https://upload.wikimedia.org/wikipedia/en/4/40/UOSwabi-Logo.jpeg",
   },

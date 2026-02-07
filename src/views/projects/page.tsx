@@ -3,6 +3,7 @@ import { Row, Col, Card, Tag, Image } from "antd";
 import Sarab from "assets/images/sarab.png";
 import Racid from "assets/images/racid.png";
 import Jazaro from "assets/images/jazaro.png";
+import Buland from "assets/images/buland.png";
 import SundayCode from "assets/images/sunday.png";
 import BreachPlus from "assets/images/Breach+.png";
 import SmartDealer from "assets/images/smartdealer.png";
@@ -80,8 +81,21 @@ const Projects = () => {
         "TensorFlow",
       ],
       github: true,
-      live: "https://sundaycode.tech",
+      live: "https://buland.tech",
       image: SundayCode,
+    },
+    {
+      title: "Buland Academy",
+      description:
+        "Buland Academy is a skills-focused learning platform dedicated to teaching practical, in-demand digital skills. The academy empowers students to gain hands-on experience in technology, business, and career-oriented fields through expert-led courses.",
+      technologies: [
+        "React",
+        "Node.js",
+        "TypeScript"
+      ],
+      github: true,
+      live: "https://buland.pk",
+      image: Buland,
     },
     {
       title: "Jazaro - AI Fixer Platform",
@@ -114,7 +128,7 @@ const Projects = () => {
               </div>
             </div>
             <h2
-              className="text-lg -mt-20 sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold relative z-10 text-white"
+              className="text-3xl -mt-20 sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold relative z-10 text-white"
               style={{
                 WebkitTextStroke: '.5px #fff',
                 color: 'transparent',
@@ -124,7 +138,7 @@ const Projects = () => {
             </h2>
           </div>
       <div className="w-full max-w-7xl">
-        <Row gutter={[10, 10]}>
+        <Row gutter={[10, 10]} justify={'center'}>
           {projects.map((project, index) => (
             <Col
               key={index}

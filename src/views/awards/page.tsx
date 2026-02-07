@@ -38,14 +38,7 @@ const Awards = () => {
       category: "Certificate",
       type: "card",
     },
-    {
-      title: "Full Stack Devloper",
-      organization: "Cytomate",
-      icon: Award,
-      image: CYTOMATE,
-      category: "Letter",
-      type: "card",
-    },
+ 
     {
       title: "Advent of Cyber 2025",
       organization: "TryHackMe",
@@ -69,6 +62,14 @@ const Awards = () => {
       icon: Award,
       image: A23,
       category: "Certificate",
+      type: "card",
+    },
+    {
+      title: "Full Stack Devloper",
+      organization: "Cytomate",
+      icon: Award,
+      image: CYTOMATE,
+      category: "Letter",
       type: "card",
     },
     {
@@ -101,10 +102,16 @@ const Awards = () => {
                 cover={
                   <div className="w-full h-[200px] flex items-center justify-center bg-black/10 rounded-t-lg overflow-hidden">
                     <Image
-                      src={item.image}
+                      src={item.image || "https://via.placeholder.com/400x200?text=No+Image"}
                       alt={item.title}
                       className="w-full h-full object-cover rounded-t-lg"
                       style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                      placeholder={
+                        <div className="w-full h-full flex items-center justify-center bg-black/10 rounded-t-lg">
+                          <item.icon className="w-12 h-12 text-blue-400 animate-pulse" />
+                        </div>
+                      }
+                      fallback="https://via.placeholder.com/400x200?text=No+Image"
                     />
                   </div>
                 }
