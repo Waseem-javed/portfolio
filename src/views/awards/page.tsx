@@ -103,68 +103,79 @@ const Awards = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[80vh] p-6 w-full max-w-7xl mx-auto">
-      <Row gutter={[16, 16]} justify={'center'} className="w-full mb-8">
+      <Row gutter={[16, 16]} justify="center" className="w-full mb-8">
         {awardsData.map((item, index) => (
-          <Col
-            key={index}
-            xs={24}
-            sm={12}
-            lg={8}
-            className="flex"
-          >
-            <div className="relative w-full h-full flex">
+          <Col key={index} xs={24} sm={12} lg={8} className="flex">
+            {/* Gradient border wrapper — always full-width, no layout shift */}
+            <div
+              className="relative w-full p-[1.5px] rounded-xl group cursor-pointer"
+              style={{ background: "linear-gradient(135deg,#3b82f6,#a855f7,#ec4899)" }}
+            >
               <Card
-                className="bg-white/5 border-4 border-transparent group-hover:border-transparent h-full flex flex-col items-stretch group cursor-pointer hover:shadow-sm relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:-z-10 before:rounded-lg before:border-4 before:border-transparent before:bg-[conic-gradient(var(--tw-gradient-stops))] before:from-blue-400 before:via-purple-400 before:to-blue-400 before:animate-spin-slow"
+                className="w-full h-full rounded-xl border-0 overflow-hidden dark:bg-[#0d0d20] bg-white"
+                styles={{ body: { padding: 14, background: "transparent" } }}
                 cover={
-                  <div className="w-full h-[200px] flex items-center justify-center bg-black/10 rounded-t-lg overflow-hidden">
+                  /* aspect-video locks height before image loads — eliminates layout shift */
+                  <div className="relative w-full aspect-video overflow-hidden rounded-t-xl bg-gradient-to-br from-blue-900/20 to-purple-900/20">
+                    {/* icon placeholder sits behind the image */}
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+                      <item.icon className="w-12 h-12 text-blue-400/30" />
+                    </div>
+                    {/* wrapperStyle makes the antd span fill the container — fixes layout shift */}
                     <Image
-                      src={item.image || "https://via.placeholder.com/400x200?text=No+Image"}
+                      src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover rounded-t-lg"
-                      style={{ objectFit: "cover", width: "100%", height: "100%" }}
-                      placeholder={
-                        <div className="w-full h-full flex items-center justify-center bg-black/10 rounded-t-lg">
-                          <item.icon className="w-12 h-12 text-blue-400 animate-pulse" />
-                        </div>
-                      }
-                      fallback="https://via.placeholder.com/400x200?text=No+Image"
+                      wrapperStyle={{
+                        position: "absolute",
+                        inset: 0,
+                        width: "100%",
+                        height: "100%",
+                        display: "block",
+                        zIndex: 1,
+                      }}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                      }}
+                      className="transition-transform duration-500 group-hover:scale-105"
+                      preview={{ maskClassName: "rounded-t-xl" }}
                     />
                   </div>
                 }
               >
-                <div className="flex flex-col flex-1 h-full justify-between">
+                <div className="flex flex-col h-full justify-between relative">
                   <Meta
                     avatar={
-                      <div className="px-2 mt-1 border sm:p-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
-                        <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                      <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-5 h-5 text-white" />
                       </div>
                     }
                     title={
-                      <span className="text-lg sm:text-xl font-bold text-white line-clamp-1">
+                      <span className="text-base font-bold dark:text-white text-gray-900 line-clamp-1">
                         {item.title}
                       </span>
                     }
                     description={
-                      <p className="text-xs sm:text-sm text-gray-400 line-clamp-1">
+                      <p className="text-xs dark:text-gray-400 text-gray-500 line-clamp-1">
                         {item.organization}
                       </p>
                     }
                   />
-                </div>
-                {item.description && (
-                  <div
-                    className="absolute inset-0 z-10 flex items-center justify-center bg-black/50 bg-opacity-95 text-white px-4 py-6 rounded-lg transition-opacity duration-200 opacity-0 group-hover:opacity-100"
-                    style={{
-                      pointerEvents: "none"
-                    }}
-                  >
-                    <div className="text-sm sm:text-base text-center">
-                      {item.description.length > 110
-                        ? item.description.slice(0, 110) + "..."
-                        : item.description}
+                  {item.description && (
+                    <div
+                      className="absolute inset-0 z-10 flex items-center justify-center bg-black/80 text-white px-4 py-6 rounded-xl transition-opacity duration-200 opacity-0 group-hover:opacity-100"
+                      style={{ pointerEvents: "none" }}
+                    >
+                      <p className="text-sm text-center leading-relaxed">
+                        {item.description.length > 120
+                          ? item.description.slice(0, 120) + "…"
+                          : item.description}
+                      </p>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </Card>
             </div>
           </Col>

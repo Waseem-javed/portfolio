@@ -128,9 +128,9 @@ const Projects = () => {
               </div>
             </div>
             <h2
-              className="text-3xl -mt-20 sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold relative z-10 text-white"
+              className="text-3xl -mt-20 sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold relative z-10"
               style={{
-                WebkitTextStroke: '.5px #fff',
+                WebkitTextStroke: '0.5px var(--stroke-color)',
                 color: 'transparent',
               }}
             >
@@ -151,7 +151,7 @@ const Projects = () => {
             >
               <Card
                 hoverable
-                className="flex flex-col h-full bg-transparent rounded-2xl backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-200 shadow-lg"
+                className="flex flex-col h-full bg-transparent rounded-2xl backdrop-blur-sm dark:border-white/10 border-gray-200 dark:hover:border-white/30 hover:border-gray-400 border transition-all duration-200 shadow-lg"
                 cover={
                   <Image
                     src={project.image}
@@ -166,11 +166,11 @@ const Projects = () => {
                 <div className="flex flex-col flex-1 h-full">
                   <Meta
                     title={
-                      <span className="text-lg font-semibold text-gray-100">{project.title}</span>
+                      <span className="text-lg font-semibold dark:text-gray-100 text-gray-800">{project.title}</span>
                     }
                     description={
                       <>
-                        <p className="text-gray-400 text-xs line-clamp-3 mb-2">{project.description}</p>
+                        <p className="dark:text-gray-400 text-gray-500 text-xs line-clamp-3 mb-2">{project.description}</p>
                         <div className="flex flex-wrap gap-1 mb-2">
                           {project.technologies.map((tech, techIndex) => (
                             <Tag

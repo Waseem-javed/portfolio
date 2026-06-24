@@ -172,9 +172,9 @@ const Technologies = () => {
               </div>
             </div>
             <h2
-              className="text-2xl -mt-20 sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold relative z-10 text-white"
+              className="text-2xl -mt-20 sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold relative z-10"
               style={{
-                WebkitTextStroke: '.5px #fff',
+                WebkitTextStroke: '0.5px var(--stroke-color)',
                 color: 'transparent',
               }}
             >
@@ -190,7 +190,7 @@ const Technologies = () => {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center bg-white/10 hover:bg-white/20 transition-all duration-300 cursor-pointer p-2 sm:p-4 md:p-5 lg:p-6 rounded-lg sm:rounded-xl text-center group"
+              className="flex flex-col items-center justify-center dark:bg-white/10 bg-gray-100 dark:hover:bg-white/20 hover:bg-gray-200 transition-all duration-300 cursor-pointer p-2 sm:p-4 md:p-5 lg:p-6 rounded-lg sm:rounded-xl text-center group"
             >
               <div className="relative mb-2 sm:mb-2">
                 <Image
@@ -201,7 +201,7 @@ const Technologies = () => {
                   className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
-              <h3 className="text-white text-xs sm:text-sm md:text-base lg:text-lg font-semibold leading-tight">
+              <h3 className="dark:text-white text-gray-800 text-xs sm:text-sm md:text-base lg:text-lg font-semibold leading-tight">
                 {tech.name}
               </h3>
             </div>

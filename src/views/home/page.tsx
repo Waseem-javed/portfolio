@@ -92,10 +92,10 @@ const Home = () => {
               download
               type="pdf"
               href={"/waseemjaved.pdf"}
-              className="flex items-center gap-2 px-1 my-auto sm:px-6 py-2 sm:py-3 border-2 rounded-full text-white-500 text-sm sm:text-base font-medium hover:bg-white/10 hover:text-white transition-all duration-300"
+              className="flex items-center gap-2 px-1 my-auto sm:px-6 py-2 sm:py-3 border-2 dark:border-white/40 border-gray-400 rounded-full text-sm sm:text-base font-medium dark:hover:bg-white/10 hover:bg-gray-100 dark:text-white text-gray-800 transition-all duration-300"
             >
-              <Download className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-              <Text className="text-white">Download Resume</Text>
+              <Download className="w-4 h-4 sm:w-5 sm:h-5 dark:text-white text-gray-700" />
+              <Text className="dark:text-white text-gray-800">Download Resume</Text>
             </a>
             <Link
               to="https://sundaycode.tech"

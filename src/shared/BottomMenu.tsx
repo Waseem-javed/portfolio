@@ -46,7 +46,7 @@ export const BottomMenu = () => {
     menuItems.find((item) => item.path === location.pathname)?.id || "home";
 
   return (
-     <Segmented
+      <Segmented
         value={activeKey}
         onChange={(key) => {
           const item = menuItems.find((i) => i.id === key);
@@ -56,22 +56,26 @@ export const BottomMenu = () => {
           value: item.id,
           label: (
             <div
-              className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 rounded-full cursor-pointer transition-colors flex-shrink-0
+              className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 rounded-full cursor-pointer transition-all duration-200 flex-shrink-0
                 ${
                   activeKey === item.id
-                    ? "bg-gradient-to-r from-blue-500 to-purple-500"
-                    : "hover:bg-white/10"
+                    ? "bg-gradient-to-r from-blue-500 to-purple-500 shadow-md"
+                    : "dark:hover:bg-white/10 hover:bg-black/10"
                 }
               `}
             >
               <item.icon
                 className={`w-4 h-4 sm:w-5 sm:h-5 ${
-                  activeKey === item.id ? "text-white" : "text-white/80"
+                  activeKey === item.id
+                    ? "text-white"
+                    : "dark:text-white/80 text-gray-700"
                 }`}
               />
               <span
                 className={`text-xs sm:text-sm font-medium hidden sm:block ${
-                  activeKey === item.id ? "text-white" : "text-white/80"
+                  activeKey === item.id
+                    ? "text-white"
+                    : "dark:text-white/80 text-gray-700"
                 }`}
               >
                 {item.label}
@@ -80,11 +84,7 @@ export const BottomMenu = () => {
           ),
         }))}
         className="segmented p-0 m-0"
-        style={{
-          border: "none",
-          boxShadow: "none",
-          background: "transparent",
-        }}
+        style={{ border: "none", boxShadow: "none", background: "transparent" }}
       />
   );
 };

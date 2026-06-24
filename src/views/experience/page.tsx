@@ -91,16 +91,16 @@ const Experience = () => {
               return (
                 <div
                   key={index}
-                  className="relative cursor-pointer flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 border border-white/10 hover:border-white/30 rounded-lg px-4 py-4 shadow-xl backdrop-blur-sm transition-all duration-300 group"
+                  className="relative cursor-pointer flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 border dark:border-white/10 border-gray-200 dark:hover:border-white/30 hover:border-gray-400 rounded-lg px-4 py-4 shadow-xl backdrop-blur-sm transition-all duration-300 group"
                 >
                   {/* Timeline Dot and Year (sm and up) */}
                   <div className=" hidden sm:flex flex-col items-center z-10 mr-2">
                     <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-blue-500 via-purple-600 to-pink-500 flex items-center justify-center shadow-lg border-2 border-white/80">
                         <exp.icon className="text-white w-4 h-4" />
                     </div>
-                    <div className="flex flex-col items-center mt-1 text-[11px] text-blue-200 font-semibold">
+                    <div className="flex flex-col items-center mt-1 text-[11px] dark:text-blue-200 text-blue-700 font-semibold">
                       <span>{endDate?.trim()}</span>
-                      <span className="h-3 w-0.5 bg-blue-200 my-0.5 rounded-full" />
+                      <span className="h-3 w-0.5 dark:bg-blue-200 bg-blue-500 my-0.5 rounded-full" />
                       <span>{startDate?.trim()}</span>
                     </div>
                     
@@ -108,17 +108,17 @@ const Experience = () => {
 
                   {/* Card main content */}
                   <div className=" flex-1 min-w-0">
-                    <h3 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-400">
+                    <h3 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r dark:from-blue-400 dark:via-purple-500 dark:to-pink-400 from-blue-600 via-purple-600 to-pink-600">
                       {exp.role}
                     </h3>
-                    <p className="text-gray-300 text-base sm:text-lg">
+                    <p className="dark:text-gray-300 text-gray-700 text-base sm:text-lg">
                       {exp.company}
                     </p>
-                    <p className="text-gray-400 text-sm sm:text-base base line-clamp-2">
+                    <p className="dark:text-gray-400 text-gray-500 text-sm sm:text-base base line-clamp-2">
                       {exp.description}
                     </p>
                     {/* Responsive: Duration below details on mobile */}
-                    <span className="text-xs sm:hidden text-blue-400 font-semibold mt-2 block">
+                    <span className="text-xs sm:hidden dark:text-blue-400 text-blue-600 font-semibold mt-2 block">
                       {exp.duration}
                     </span>
                   </div>

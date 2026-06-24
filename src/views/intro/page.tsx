@@ -26,7 +26,7 @@ const Intro = () => {
             </span>
           </h1>
 
-          <div className="text-gray-300">
+          <div className="dark:text-gray-300 text-gray-700">
             <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed text-justify">
               <span>
                 I am <span className="font-bold text-blue-400">Waseem Javed</span>, a <span className="font-bold text-pink-400">Software Engineer</span> and <span className="font-bold text-purple-400">Offensive Security Specialist</span>. My journey began at the <span className="font-semibold text-blue-300">University of Swabi</span>, where I studied <span className="font-semibold text-orange-300">Computer Science</span> and worked with the department faculties on the <span className="font-bold text-green-400">CSS (Conference Submission System)</span> project in 2019. After graduation, I started my career at <span className="font-semibold text-blue-400">COMSATS Cyber Lab</span>, working closely with a professor as a <span className="font-bold text-purple-400">Full Stack Engineer</span>.
