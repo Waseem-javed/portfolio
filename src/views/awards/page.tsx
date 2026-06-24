@@ -9,11 +9,27 @@ import WAP from "assets/images/WAP.png";
 import JPTHM from "assets/images/JPTHM.png";
 import Award19 from "assets/images/Award19.png";
 import CYTOMATE from "assets/images/cytomate.png";
-
+import {PEH, CRTA} from "assets/images";
 const { Meta } = Card;
 
 const Awards = () => {
   const awardsData = [
+    {
+      title: "Practical Ethical Hacking",
+      organization: "TCM Security",
+      icon: Award,
+      image: PEH,
+      category: "Certificate",
+      type: "card",
+    },
+    {
+      title: "Certified Red Team Analyst",
+      organization: "Cyberwarfare Labs",
+      icon: Award,
+      image: CRTA,
+      category: "Certificate",
+      type: "card",
+    },
     {
       title: "Certified Ethical Hacker",
       organization: "Ehunar Pakistan",

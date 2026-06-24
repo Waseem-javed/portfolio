@@ -4,9 +4,17 @@ import { Clock10 } from "lucide-react";
 
 const experienceData = [
   {
+    role: "Founder and CEO",
+    company: "Sunday Code AI",
+    duration: "Present",
+    description:"Founded Sunday Code AI, an innovative startup focused on developing AI-powered solutions for businesses. Leading a team of developers and data scientists to create cutting-edge products that leverage artificial intelligence to solve real-world problems.",
+    icon: Clock10,
+    logo: "https://sundaycode.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsundaycode.0qyzhzbd8ogo4.jpg&w=384&q=75",
+  },
+  {
     role: "Research and Development Manager",
     company: "Smart Dealer",
-    duration: "Oct 2024 - Present",
+    duration: "Present",
     description:
       "Managed a development team using proper Scrum practices, driving digital transformation and process improvements.",
     icon: Clock10,
@@ -19,7 +27,7 @@ const experienceData = [
     description:
       "Leading development of enterprise applications using React, Node.js, and cloud technologies. Implementing CI/CD pipelines and microservices architecture.",
     icon: Clock10,
-    logo: "https://averox.com/wp-content/uploads/2025/04/Averox-Top-IT-company-in-world.png",
+    logo: "https://averox.com/wp-content/uploads/2026/05/averox-logo-black.png.pagespeed.ce.0HQNtGNhIs.png",
   },
   {
     role: "Full Stack Engineer",
@@ -67,7 +75,7 @@ development experiences in different fields.`,
 plots within their colony. This tool will centralize plot-related information, making it
 easier to register new plots, track maintenance, and manage resident records`,
     icon: Clock10,
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Pakistan_Army_Emblem.png/985px-Pakistan_Army_Emblem.png",
+    logo: "https://upload.wikimedia.org/wikipedia/en/9/92/Pakistan_Army_Corps_of_Service.jpg",
   },
 ];
 
@@ -91,9 +99,9 @@ const Experience = () => {
                         <exp.icon className="text-white w-4 h-4" />
                     </div>
                     <div className="flex flex-col items-center mt-1 text-[11px] text-blue-200 font-semibold">
-                      <span>{endDate.trim()}</span>
+                      <span>{endDate?.trim()}</span>
                       <span className="h-3 w-0.5 bg-blue-200 my-0.5 rounded-full" />
-                      <span>{startDate.trim()}</span>
+                      <span>{startDate?.trim()}</span>
                     </div>
                     
                   </div>
