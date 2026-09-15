@@ -4,14 +4,15 @@ import React from "react";
 import { Image, Typography } from "antd";
 import { Download } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
-import MY_IMAGE from "assets/images/waseem.jpeg";
+import Waseem_Dark from "assets/images/meesaw-dark.png";
+import Waseem_Light from "assets/images/meesaw-light.png";
 
 import SundayCode from "assets/images/sundaycode.jpg";
 import { Link } from "react-router-dom";
 
 const { Text } = Typography;
 
-const Home = () => {
+const Home = ({ isDark }: { isDark: boolean }) => {
   return (
     <div className="flex items-center justify-center">
       <div className="container mx-auto px-4 py-8 md:py-12">
@@ -52,7 +53,7 @@ const Home = () => {
               {/* Profile image */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <Image
-                  src={MY_IMAGE}
+                  src={isDark ? Waseem_Dark : Waseem_Light}
                   preview={false}
                   width={300}
                   height={300}
@@ -91,11 +92,13 @@ const Home = () => {
             <a
               download
               type="pdf"
-              href={"/waseemjaved.pdf"}
+              href={"/waseem.pdf"}
               className="flex items-center gap-2 px-1 my-auto sm:px-6 py-2 sm:py-3 border-2 dark:border-white/40 border-gray-400 rounded-full text-sm sm:text-base font-medium dark:hover:bg-white/10 hover:bg-gray-100 dark:text-white text-gray-800 transition-all duration-300"
             >
               <Download className="w-4 h-4 sm:w-5 sm:h-5 dark:text-white text-gray-700" />
-              <Text className="dark:text-white text-gray-800">Download Resume</Text>
+              <Text className="dark:text-white text-gray-800">
+                Download Resume
+              </Text>
             </a>
             <Link
               to="https://sundaycode.tech"

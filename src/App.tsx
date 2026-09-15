@@ -57,24 +57,24 @@ function App() {
           </Header>
           <Content className="flex-1 flex flex-col overflow-y-auto pt-[72px] pb-[72px]">
             <Suspense
-                fallback={
-                  <div className="flex items-center justify-center h-screen">
-                    <Spin size="large" />
-                  </div>
-                }
-              >
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/bio" element={<Intro />} />
-                  <Route path="/education" element={<Education />} />
-                  <Route path="/experience" element={<Experience />} />
-                  <Route path="/projects" element={<Projects />} />
-                  <Route path="/skills" element={<Skills />} />
-                  <Route path="/awards" element={<Awards />} />
-                  <Route path="/techs" element={<Techs />} />
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </Suspense>
+              fallback={
+                <div className="flex items-center justify-center h-screen">
+                  <Spin size="large" />
+                </div>
+              }
+            >
+              <Routes>
+                <Route path="/" element={<Home isDark={isDark} />} />
+                <Route path="/bio" element={<Intro />} />
+                <Route path="/education" element={<Education />} />
+                <Route path="/experience" element={<Experience />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/awards" element={<Awards />} />
+                <Route path="/techs" element={<Techs />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
           </Content>
           <Footer className="py-2 p-0 m-0 fixed bottom-2 left-1/2 -translate-x-1/2 z-50 flex justify-center items-center bg-transparent backdrop-blur-sm shadow-md w-full max-w-6xl rounded-full">
             <BottomMenu />

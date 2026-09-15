@@ -1,15 +1,20 @@
 import React from "react";
 import { Trophy, Award } from "lucide-react";
 import { Card, Image, Row, Col } from "antd";
-import CEH from "assets/images/CEH.png";
-import A25 from 'assets/images/A25.png'
-import A24 from 'assets/images/A24.png'
-import A23 from "assets/images/A23.png";
-import WAP from "assets/images/WAP.png";
-import JPTHM from "assets/images/JPTHM.png";
-import Award19 from "assets/images/Award19.png";
-import CYTOMATE from "assets/images/cytomate.png";
-import {PEH, CRTA} from "assets/images";
+
+import {
+  PEH,
+  CRTA,
+  API_RTA,
+  CEH,
+  A25,
+  A24,
+  A23,
+  WAP,
+  JPTHM,
+  Award19,
+  CYTOMATE,
+} from "assets/images";
 const { Meta } = Card;
 
 const Awards = () => {
@@ -23,6 +28,14 @@ const Awards = () => {
       type: "card",
     },
     {
+      title: "Certified Ethical Hacker",
+      organization: "Ehunar Pakistan",
+      icon: Award,
+      image: CEH,
+      category: "Certificate",
+      type: "card",
+    },
+    {
       title: "Certified Red Team Analyst",
       organization: "Cyberwarfare Labs",
       icon: Award,
@@ -31,10 +44,10 @@ const Awards = () => {
       type: "card",
     },
     {
-      title: "Certified Ethical Hacker",
-      organization: "Ehunar Pakistan",
+      title: "Certified API Red Team Analyst",
+      organization: "Cyberwarfare Labs",
       icon: Award,
-      image: CEH,
+      image: API_RTA,
       category: "Certificate",
       type: "card",
     },
@@ -54,7 +67,7 @@ const Awards = () => {
       category: "Certificate",
       type: "card",
     },
- 
+
     {
       title: "Advent of Cyber 2025",
       organization: "TryHackMe",
@@ -109,7 +122,9 @@ const Awards = () => {
             {/* Gradient border wrapper — always full-width, no layout shift */}
             <div
               className="relative w-full p-[1.5px] rounded-xl group cursor-pointer"
-              style={{ background: "linear-gradient(135deg,#3b82f6,#a855f7,#ec4899)" }}
+              style={{
+                background: "linear-gradient(135deg,#3b82f6,#a855f7,#ec4899)",
+              }}
             >
               <Card
                 className="w-full h-full rounded-xl border-0 overflow-hidden dark:bg-[#0d0d20] bg-white"
